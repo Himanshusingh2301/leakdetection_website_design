@@ -1,0 +1,23 @@
+<section class="w2-final" id="contact" aria-labelledby="w2-final-title">
+  <div class="w2-final-panel">
+    <div class="w2-final-copy"><p class="w2-kicker"><b>14</b> Request service</p><h2 class="w2-heading" id="w2-final-title">A hidden leak is easier to face with a clear plan.</h2><p class="w2-intro">Tell us what you noticed and where. We’ll help you figure out what information to have ready when you contact a leak detection provider.</p></div>
+    <form class="w2-contact-form" id="w2-contact-form">
+      <label>Your name<input name="name" autocomplete="name" required placeholder="Name" /></label>
+      <label>Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com" /></label>
+      <label>Houston ZIP code<input name="zip" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}" required placeholder="5-digit ZIP" /></label>
+      <label>What have you noticed?<select name="symptom"><option>Choose a clue</option><option>Higher water bill</option><option>Wall or ceiling stain</option><option>Warm or wet floor</option><option>Wet spot outside</option><option>Something else</option></select></label>
+      <button class="w2-button" type="submit">Prepare my request <span aria-hidden="true">↗</span></button>
+      <p class="w2-form-note">Preview form: your information stays in this browser and is not sent anywhere yet.</p>
+      <p class="w2-form-success" id="w2-form-success" role="status" hidden>Thanks — your request is ready. This preview does not send it to a service provider.</p>
+    </form>
+  </div>
+</section>
+<script>
+  const contactForm = document.querySelector<HTMLFormElement>('#w2-contact-form');
+  const contactSuccess = document.querySelector<HTMLElement>('#w2-form-success');
+  contactForm?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!contactForm.reportValidity()) return;
+    if (contactSuccess) contactSuccess.hidden = false;
+  });
+</script>

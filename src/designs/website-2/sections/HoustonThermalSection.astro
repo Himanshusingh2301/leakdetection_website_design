@@ -1,0 +1,69 @@
+<section class="w2-lab" aria-labelledby="w2-lab-title">
+  <div class="w2-shell">
+    <div class="w2-lab-heading">
+      <p class="w2-kicker"><b>06</b> Leak detection, up close</p>
+      <h2 class="w2-heading" id="w2-lab-title">Try the tools. <em>Follow the clue.</em></h2>
+      <p class="w2-intro">Tap each method to see what a technician is looking for. This is an educational illustration; the right test depends on the pipe and the symptoms.</p>
+    </div>
+    <div class="w2-lab-card">
+      <div class="w2-lab-visual" id="w2-lab-visual" data-mode="thermal" role="img" aria-label="Illustrated wall cutaway with a water pipe and suspected leak">
+        <div class="w2-lab-scene">
+          <div class="w2-lab-wall"></div>
+          <div class="w2-lab-floor"></div>
+          <div class="w2-lab-pipe"><span></span></div>
+          <div class="w2-lab-leak"><i></i><i></i><i></i></div>
+          <div class="w2-lab-thermal-glow"></div>
+          <div class="w2-lab-wave"><i></i><i></i><i></i></div>
+          <div class="w2-lab-gauge"><b>PSI</b><span></span><i></i></div>
+          <div class="w2-lab-meter"><div><i></i><i></i><i></i><i></i></div><span>WATER METER</span></div>
+          <div class="w2-lab-label">PIPE IN WALL</div>
+          <div class="w2-lab-leak-label">POSSIBLE LEAK</div>
+          <svg class="w2-lab-lines" viewBox="0 0 600 420" aria-hidden="true"><path d="M110 85h350v245H110z"/><path d="M110 292h350"/><path d="M282 85v207"/><path d="M205 214h112v78"/><path d="M370 85v64"/></svg>
+        </div>
+        <div class="w2-lab-status"><span class="w2-lab-status-dot"></span><span id="w2-lab-status">THERMAL PATTERN</span><small>ILLUSTRATION</small></div>
+      </div>
+      <div class="w2-lab-controls">
+        <div class="w2-lab-tabs" role="tablist" aria-label="Explore leak detection methods">
+          <button class="w2-lab-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="w2-lab-panel" id="w2-lab-tab-thermal" data-mode="thermal" data-status="THERMAL PATTERN" data-title="Read the surface temperature." data-copy="Thermal imaging can reveal temperature patterns on a wall or floor. A technician uses those patterns as one clue while tracing a likely pipe route." tabindex="0"><span>01</span>Thermal</button>
+          <button class="w2-lab-tab" type="button" role="tab" aria-selected="false" aria-controls="w2-lab-panel" id="w2-lab-tab-acoustic" data-mode="acoustic" data-status="ACOUSTIC LISTENING" data-title="Listen for escaping water." data-copy="Acoustic equipment helps a technician listen for the sound of water escaping a pressurized line and narrow down where to investigate." tabindex="-1"><span>02</span>Listen</button>
+          <button class="w2-lab-tab" type="button" role="tab" aria-selected="false" aria-controls="w2-lab-panel" id="w2-lab-tab-pressure" data-mode="pressure" data-status="LINE PRESSURE CHECK" data-title="Check how a line holds pressure." data-copy="Pressure testing helps evaluate whether a plumbing line is holding pressure. It is interpreted alongside the property and the other evidence." tabindex="-1"><span>03</span>Pressure</button>
+          <button class="w2-lab-tab" type="button" role="tab" aria-selected="false" aria-controls="w2-lab-panel" id="w2-lab-tab-meter" data-mode="meter" data-status="METER MOVEMENT" data-title="See whether water is still moving." data-copy="With fixtures off, movement at the water meter can be a clue that water is flowing somewhere. It does not identify the source by itself." tabindex="-1"><span>04</span>Meter test</button>
+        </div>
+        <div class="w2-lab-panel" id="w2-lab-panel" role="tabpanel" aria-labelledby="w2-lab-tab-thermal" aria-live="polite">
+          <p class="w2-lab-panel-kicker">WHAT THE TECHNICIAN CHECKS</p>
+          <h3 id="w2-lab-title-active">Read the surface temperature.</h3>
+          <p id="w2-lab-copy">Thermal imaging can reveal temperature patterns on a wall or floor. A technician uses those patterns as one clue while tracing a likely pipe route.</p>
+          <p class="w2-lab-disclaimer">The colored view is a teaching illustration, not a real thermal-camera image or diagnosis.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  const lab = document.querySelector<HTMLElement>('.w2-lab');
+  const labTabs = [...(lab?.querySelectorAll<HTMLButtonElement>('.w2-lab-tab') ?? [])];
+  const labVisual = lab?.querySelector<HTMLElement>('#w2-lab-visual');
+  const labStatus = lab?.querySelector<HTMLElement>('#w2-lab-status');
+  const labPanel = lab?.querySelector<HTMLElement>('#w2-lab-panel');
+  const labTitle = lab?.querySelector<HTMLElement>('#w2-lab-title-active');
+  const labCopy = lab?.querySelector<HTMLElement>('#w2-lab-copy');
+  function setLabMode(button: HTMLButtonElement, focus = false) {
+    const mode = button.dataset.mode ?? 'thermal';
+    labTabs.forEach((tab) => { const active = tab === button; tab.classList.toggle('is-active', active); tab.setAttribute('aria-selected', String(active)); tab.tabIndex = active ? 0 : -1; });
+    labVisual?.setAttribute('data-mode', mode);
+    labPanel?.setAttribute('aria-labelledby', button.id);
+    if (labStatus) labStatus.textContent = button.dataset.status ?? '';
+    if (labTitle) labTitle.textContent = button.dataset.title ?? '';
+    if (labCopy) labCopy.textContent = button.dataset.copy ?? '';
+    if (focus) button.focus();
+  }
+  labTabs.forEach((button, index) => {
+    button.addEventListener('click', () => setLabMode(button));
+    button.addEventListener('keydown', (event) => {
+      if (!['ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp'].includes(event.key)) return;
+      event.preventDefault();
+      const next = ['ArrowRight', 'ArrowDown'].includes(event.key) ? 1 : -1;
+      setLabMode(labTabs[(index + next + labTabs.length) % labTabs.length], true);
+    });
+  });
+</script>

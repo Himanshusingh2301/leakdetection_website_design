@@ -1,21 +1,45 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-const { title = 'Website 2' } = Astro.props;
+import './website-2.css';
+import HoustonHeader from './HoustonHeader.astro';
+import HoustonHero from './HoustonHero.astro';
+import HoustonProofBar from './HoustonProofBar.astro';
+import LeakFinderSection from './LeakFinderSection.astro';
+import HoustonProcessSection from './HoustonProcessSection.astro';
+import HoustonServiceAreaSection from './HoustonServiceAreaSection.astro';
+import HoustonFaqSection from './HoustonFaqSection.astro';
+import HoustonFinalCta from './HoustonFinalCta.astro';
+import HoustonFooter from './HoustonFooter.astro';
+import HoustonServicesSection from './HoustonServicesSection.astro';
+import HoustonThermalSection from './HoustonThermalSection.astro';
+import HoustonPricingSection from './HoustonPricingSection.astro';
+import HoustonPromiseSection from './HoustonPromiseSection.astro';
+import HoustonCaseStudySection from './HoustonCaseStudySection.astro';
+import HoustonReviewsSection from './HoustonReviewsSection.astro';
+
+const title = 'Leak Detection in Houston, TX | Gulfline Leak Detection';
+const description = 'Learn how professional leak detection can help locate hidden water leaks in Houston homes and businesses, what signs to watch for, and what to expect during an inspection.';
 ---
-<BaseLayout title={`${title} | Design Preview`} description={`Preview ${title}, an independent website concept in the Astro design library.`}>
-  <main class="preview">
-    <a class="back" href="/">← All website designs</a>
-    <p class="eyebrow">DESIGN 02 · STARTER PREVIEW</p>
-    <h1>{title}</h1>
-    <p>This is the starting page for Website 2. Its sections, styles, and assets will live alongside this design so they can be reused across its pages.</p>
-    <div class="note">Ready for your section reference images</div>
-  </main>
+
+<BaseLayout title={title} description={description}>
+  <div class="w2-site">
+    <a class="w2-skip" href="#main-content">Skip to content</a>
+    <HoustonHeader />
+    <main id="main-content">
+      <HoustonHero />
+      <HoustonProofBar />
+      <LeakFinderSection />
+      <HoustonServicesSection />
+      <HoustonThermalSection />
+      <HoustonProcessSection />
+      <HoustonPricingSection />
+      <HoustonServiceAreaSection />
+      <HoustonCaseStudySection />
+      <HoustonPromiseSection />
+      <HoustonReviewsSection />
+      <HoustonFaqSection />
+      <HoustonFinalCta />
+    </main>
+    <HoustonFooter />
+  </div>
 </BaseLayout>
-<style>
-  .preview { max-width: 760px; margin: 0 auto; padding: 8vh 7vw; }
-  .back { color: #547262; font-size: .85rem; }
-  .eyebrow { margin-top: 12vh; color: #748b7c; font-size: .7rem; letter-spacing: .15em; }
-  h1 { margin: 15px 0; font-size: clamp(3rem, 10vw, 6.5rem); letter-spacing: -.07em; }
-  .preview > p:not(.eyebrow) { max-width: 520px; color: #68756d; line-height: 1.8; }
-  .note { margin-top: 48px; padding: 22px; border: 1px dashed #b9c8bc; color: #748b7c; font-size: .85rem; }
-</style>

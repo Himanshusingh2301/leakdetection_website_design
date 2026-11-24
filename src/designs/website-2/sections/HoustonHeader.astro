@@ -1,0 +1,24 @@
+<header class="w2-header">
+  <div class="w2-topline"><strong>Houston, Texas</strong><span aria-hidden="true">·</span> Hidden leak questions? Start with a clear plan.</div>
+  <div class="w2-navrow"><div class="w2-navinner">
+    <a class="w2-brand" href="/website-2/" aria-label="Gulfline Leak Detection home"><span class="w2-brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3C12 9 7 14 7 20a9 9 0 0 0 18 0c0-6-5-11-9-17Z"/><path d="M12 20c0 2 1.4 3.5 3.6 4"/></svg></span><span class="w2-brand-name"><strong>GULFLINE</strong><small>LEAK DETECTION · HOUSTON</small></span></a>
+    <button class="w2-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="w2-navlinks"><span></span><span></span></button>
+    <nav class="w2-navlinks" id="w2-navlinks" aria-label="Main navigation"><a href="#leak-services">Services</a><a href="#service-areas">Areas</a><a href="#process">Our process</a><a href="#reviews">Reviews</a><a href="#faq">FAQs</a></nav>
+    <div class="w2-navright"><a class="w2-navcall" href="#contact"><small>Need help with a leak?</small><strong>Request a call</strong></a><a class="w2-button w2-nav-cta" href="#contact">Book an inspection <span aria-hidden="true">↗</span></a></div>
+  </div></div>
+</header>
+<script>
+  const menuButton = document.querySelector<HTMLButtonElement>('.w2-menu');
+  const menu = document.querySelector<HTMLElement>('#w2-navlinks');
+  menuButton?.addEventListener('click', () => {
+    const open = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', String(!open));
+    menuButton.setAttribute('aria-label', open ? 'Open navigation' : 'Close navigation');
+    menu?.classList.toggle('is-open', !open);
+  });
+  menu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+    menuButton?.setAttribute('aria-expanded', 'false');
+    menuButton?.setAttribute('aria-label', 'Open navigation');
+    menu?.classList.remove('is-open');
+  }));
+</script>
