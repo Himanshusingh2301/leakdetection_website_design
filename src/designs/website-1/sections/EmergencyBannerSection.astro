@@ -1,0 +1,94 @@
+<section class="emergency-banner-section" aria-labelledby="emergency-banner-title">
+  <div class="emergency-banner">
+    <span class="banner-clock" aria-hidden="true">
+      <svg viewBox="0 0 48 48" focusable="false">
+        <circle cx="24" cy="24" r="17.5" />
+        <path d="M24 13.5v11l8 5" />
+      </svg>
+    </span>
+    <div class="banner-copy">
+      <p>24/7 Leak Emergency</p>
+      <h2 id="emergency-banner-title">Hidden leak costing you? Get a licensed plumber out today.</h2>
+    </div>
+    <a class="banner-call" href="tel:+17706797705">Call (770) 679-7705</a>
+  </div>
+</section>
+
+<style>
+  .emergency-banner-section {
+    padding: 48px max(9vw, 32px);
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .emergency-banner {
+    display: grid;
+    width: min(100%, 1556px);
+    min-height: 160px;
+    grid-template-columns: 36px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 24px;
+    margin: 0 auto;
+    padding: 22px 38px;
+    overflow: hidden;
+    border-left: 14px solid #ffc83d;
+    border-radius: 29px;
+    background: #1b6256;
+    box-shadow: 0 22px 44px rgba(20, 44, 40, .18);
+    color: #fff;
+  }
+  .banner-clock { display: block; width: 36px; height: 36px; color: #ffc83d; }
+  .banner-clock svg { display: block; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 4; }
+  .banner-copy p {
+    margin: 0 0 7px;
+    color: #ffc83d;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  .banner-copy h2 {
+    max-width: 850px;
+    margin: 0;
+    color: #fff;
+    font-size: clamp(27px, 1.85vw, 34px);
+    font-weight: 850;
+    letter-spacing: -.02em;
+    line-height: 1.14;
+  }
+  .banner-call {
+    display: inline-flex;
+    min-width: 350px;
+    min-height: 72px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 26px;
+    border-radius: 17px;
+    background: #bd302f;
+    box-shadow: 0 8px 0 #982423;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform .15s ease, background-color .15s ease, box-shadow .15s ease;
+  }
+  .banner-call:hover { transform: translateY(3px); background: #a92727; box-shadow: 0 8px 0 #87201f; }
+  .banner-call:focus-visible { outline: 3px solid #ffc83d; outline-offset: 5px; }
+  @media (max-width: 1120px) {
+    .emergency-banner-section { padding: 40px 5%; }
+    .emergency-banner { min-height: 148px; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 18px; padding: 20px 28px; border-left-width: 10px; }
+    .banner-clock { width: 34px; height: 34px; }
+    .banner-copy h2 { font-size: clamp(25px, 2.8vw, 31px); }
+    .banner-call { min-width: 260px; min-height: 62px; padding-inline: 20px; border-radius: 14px; font-size: 21px; }
+  }
+  @media (max-width: 760px) {
+    .emergency-banner-section { padding: 30px 20px; }
+    .emergency-banner { grid-template-columns: 30px minmax(0, 1fr); gap: 12px; padding: 18px 18px; border-left-width: 8px; border-radius: 20px; }
+    .banner-clock { width: 30px; height: 30px; }
+    .banner-copy p { margin-bottom: 6px; font-size: 13px; }
+    .banner-copy h2 { font-size: clamp(22px, 5.8vw, 29px); }
+    .banner-call { grid-column: 2; justify-self: start; min-width: min(100%, 260px); min-height: 54px; font-size: 18px; }
+  }
+</style>

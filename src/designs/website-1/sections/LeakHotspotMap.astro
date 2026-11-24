@@ -1,0 +1,147 @@
+<section class="leak-map-section" aria-labelledby="leak-map-title">
+  <header class="map-heading">
+    <p class="map-kicker">Where leaks hide</p>
+    <h2 id="leak-map-title">We Find Leaks Others Miss</h2>
+    <p class="map-intro">Tap a hotspot to jump to how we find that kind of leak. Our licensed technicians use Aquaphon A200 acoustic equipment and thermal imaging to pinpoint hidden leaks fast, with no unnecessary damage to your home or yard.</p>
+  </header>
+
+  <div class="map-scroll" role="region" aria-label="Scrollable house leak location illustration" tabindex="0">
+  <div class="house-map" aria-label="Illustration of common hidden leak locations in a home and yard">
+    <svg class="house-art" viewBox="0 0 1200 650" role="img" aria-labelledby="house-title house-description" preserveAspectRatio="xMidYMid meet">
+      <title id="house-title">Common places leaks hide around a home</title>
+      <desc id="house-description">Cutaway house illustration showing the roof, ceiling, walls, slab, underground gas line, and yard and driveway plumbing.</desc>
+
+      <!-- Soil and lawn -->
+      <path d="M0 505H1200V650H0Z" fill="#8a4b2a" />
+      <path d="M0 501H1200V516H0Z" fill="#5b9c4e" />
+      <path d="M0 516H1200" stroke="#24745d" stroke-width="3" />
+
+      <!-- Buried utilities -->
+      <path d="M82 584H206" fill="none" stroke="#e88b00" stroke-width="9" stroke-dasharray="12 9" />
+      <path d="M728 492V382H758" fill="none" stroke="#e88b00" stroke-width="8" stroke-dasharray="12 9" />
+      <path d="M742 494V385" fill="none" stroke="#e88b00" stroke-width="5" stroke-dasharray="12 9" />
+      <path d="M508 508H936V572H1094V552" fill="none" stroke="#397ddd" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+      <ellipse cx="1005" cy="566" rx="73" ry="22" fill="#766aab" opacity=".55" />
+      <text x="1054" y="599" fill="#fff" font-size="18" font-family="Arial, sans-serif">METER</text>
+
+      <!-- Foundation and house cutaway -->
+      <rect x="200" y="494" width="580" height="32" fill="#a1aaa5" />
+      <path d="M204 494V227L490 46L778 227V494" fill="#fff" stroke="#1c6356" stroke-width="7" stroke-linejoin="round" />
+      <path d="M166 237L490 22L812 237" fill="none" stroke="#bd302f" stroke-width="16" stroke-linejoin="miter" />
+      <path d="M204 337H778M490 337V494" fill="none" stroke="#1c6356" stroke-width="7" />
+      <path d="M274 494V384H360V494" fill="#fff" stroke="#1c6356" stroke-width="6" />
+      <rect x="578" y="237" width="93" height="75" fill="#f8fbf9" stroke="#1c6356" stroke-width="5" />
+      <path d="M378 340C394 350 414 350 432 340" fill="none" stroke="#d7c4a8" stroke-width="17" stroke-linecap="round" />
+      <path class="ceiling-water" d="M405 342C402 348 396 354 396 359C396 365 400 369 405 369C410 369 414 365 414 359C414 354 408 348 405 342Z" fill="#397ddd" />
+
+      <!-- Water lines and leak locations -->
+      <path d="M632 312V367H566V478" fill="none" stroke="#397ddd" stroke-width="7" />
+      <path d="M566 478V508" fill="none" stroke="#397ddd" stroke-width="7" />
+      <path d="M566 508H936" fill="none" stroke="#397ddd" stroke-width="8" />
+    </svg>
+
+    <button class="hotspot high-water" type="button" data-title="High water bill" data-detail="We check your meter and use acoustic listening equipment to trace continuous water flow to its source.">
+      <span class="pulse-dot" aria-hidden="true"></span><span>High water bill</span>
+    </button>
+    <button class="hotspot ceiling" type="button" data-title="Ceiling leaks" data-detail="Thermal imaging and moisture readings help us follow ceiling stains back to the hidden leak above.">
+      <span class="pulse-dot" aria-hidden="true"></span><span>Ceiling leaks</span>
+    </button>
+    <button class="hotspot in-wall" type="button" data-title="In-wall leaks" data-detail="We scan wall surfaces and listen along the plumbing line to pinpoint leaks before opening the wall.">
+      <span class="pulse-dot" aria-hidden="true"></span><span>In-wall leaks</span>
+    </button>
+    <button class="hotspot slab" type="button" data-title="Slab leaks" data-detail="Electronic acoustic equipment locates pressurized leaks beneath concrete with minimal disruption.">
+      <span class="pulse-dot" aria-hidden="true"></span><span>Slab leaks</span>
+    </button>
+    <button class="hotspot gas" type="button" data-title="Gas leaks" data-detail="Tracer gas equipment helps track hidden gas line leaks through soil and hard-to-reach areas.">
+      <span class="pulse-dot gas-dot" aria-hidden="true"></span><span>Gas leaks</span>
+    </button>
+    <button class="hotspot yard" type="button" data-title="Yard &amp; driveway leaks" data-detail="We trace underground water lines across lawns and driveways to find the leak before digging begins.">
+      <span class="pulse-dot" aria-hidden="true"></span><span>Yard &amp; driveway leaks</span>
+    </button>
+  </div>
+  </div>
+
+  <p class="hotspot-detail" role="status" aria-live="polite" hidden></p>
+</section>
+
+<script>
+  const map = document.querySelector('.leak-map-section');
+  if (map) {
+    const detail = map.querySelector('.hotspot-detail');
+    const hotspots = map.querySelectorAll<HTMLButtonElement>('.hotspot');
+    hotspots.forEach((hotspot) => {
+      hotspot.addEventListener('click', () => {
+        hotspots.forEach((item) => item.setAttribute('aria-pressed', String(item === hotspot)));
+        if (detail) {
+          detail.textContent = `${hotspot.dataset.title}: ${hotspot.dataset.detail}`;
+          detail.hidden = false;
+          detail.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
+        }
+      });
+    });
+  }
+</script>
+
+<style>
+  .leak-map-section {
+    overflow: hidden;
+    padding: 108px max(6.9vw, 24px) 72px;
+    background: #e7f3f0;
+    color: #202833;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .map-heading { max-width: 1050px; margin: 0 auto; text-align: center; }
+  .map-kicker { margin: 0 0 14px; color: #bd302f; font-size: 17px; font-weight: 900; letter-spacing: .15em; line-height: 1.2; text-transform: uppercase; }
+  .map-heading h2 { margin: 0 0 20px; color: #1c6356; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(34px, 2.75vw, 52px); font-weight: 800; letter-spacing: -.025em; line-height: 1.12; }
+  .map-intro { max-width: 980px; margin: 0 auto; font-size: clamp(17px, 1.2vw, 23px); line-height: 1.65; }
+  .map-scroll { width: 100%; margin-top: 54px; overflow-x: auto; overflow-y: hidden; scrollbar-color: #8db6ab transparent; }
+  .house-map { position: relative; width: min(100%, 1000px); min-width: 820px; aspect-ratio: 1200 / 650; margin: 0 auto; }
+  .house-art { display: block; width: 100%; height: 100%; }
+  .hotspot {
+    position: absolute;
+    z-index: 1;
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 14px 5px 10px;
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: 999px;
+    background: #fff;
+    color: #155e52;
+    font: 800 clamp(13px, 1.12vw, 20px)/1.2 Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px rgba(21,94,82,.02);
+  }
+  .hotspot:hover, .hotspot[aria-pressed="true"] { background: #fff9ea; }
+  .pulse-dot { position: relative; display: block; flex: 0 0 19px; width: 19px; height: 19px; border-radius: 50%; background: #bd302f; }
+  .pulse-dot::before, .pulse-dot::after { position: absolute; inset: 0; border: 2px solid rgba(189,48,47,.28); border-radius: 50%; content: ""; animation: hotspot-ripple 2.4s cubic-bezier(.15,.55,.35,1) infinite; }
+  .pulse-dot::after { animation-delay: 1.2s; }
+  .gas-dot { background: #e88b00; }
+  .gas-dot::before, .gas-dot::after { border-color: rgba(232,139,0,.32); }
+  .high-water { left: 57.5%; top: 20.5%; }
+  .ceiling { left: 23.5%; top: 45%; }
+  .in-wall { left: 44.5%; top: 45%; }
+  .slab { left: 37%; top: 77%; }
+  .gas { left: 3.8%; top: 82.5%; }
+  .yard { left: 72.5%; top: 82.5%; }
+  .hotspot-detail { max-width: 760px; margin: 22px auto 0; padding: 15px 20px; border-left: 4px solid #ffc83d; border-radius: 0 10px 10px 0; background: rgba(255,255,255,.85); color: #26332f; font-size: 16px; line-height: 1.55; }
+  .ceiling-water { transform-box: fill-box; transform-origin: center top; animation: ceiling-drip 1.7s cubic-bezier(.45,0,.72,.55) infinite; }
+  @keyframes hotspot-ripple { 0% { transform: scale(.7); opacity: .65; } 100% { transform: scale(3.8); opacity: 0; } }
+  @keyframes ceiling-drip { 0% { transform: translateY(0); opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { transform: translateY(120px); opacity: 0; } }
+  @media (max-width: 960px) {
+    .leak-map-section { padding: 40px 18px 50px; }
+    .map-kicker { font-size: 14px; }
+    .map-heading h2 { font-size: clamp(30px, 7.5vw, 40px); }
+    .map-intro { font-size: 16px; line-height: 1.6; }
+    .map-scroll { width: 100%; margin-top: 44px; overflow: visible; }
+    .house-map { display: grid; width: 100%; min-width: 0; aspect-ratio: auto; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 0; }
+    .house-art { grid-column: 1 / -1; height: auto; }
+    .hotspot { position: static; min-height: 36px; gap: 7px; justify-self: start; padding: 4px 9px 4px 7px; transform: none; font-size: 13px; }
+    .pulse-dot { flex-basis: 14px; width: 14px; height: 14px; }
+    .hotspot-detail { font-size: 14px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .pulse-dot::before, .pulse-dot::after, .ceiling-water { animation: none; } }
+</style>

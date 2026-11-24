@@ -1,0 +1,88 @@
+<aside class="fixed-service-widget" aria-label="Quick service links">
+  <div class="widget-top-row">
+    <a class="back-to-top" href="#top">Back to top <span class="back-arrow" aria-hidden="true"></span></a>
+    <a class="widget-mascot" href="https://deltaplumbingatlanta.com/contact-us/" aria-label="Contact Delta Plumbing">
+      <img src="/images/website-1/running-plumber.png" alt="" width="600" height="600" />
+    </a>
+  </div>
+  <a class="request-service" href="https://deltaplumbingatlanta.com/contact-us/">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v13H9l-5 4V4Z" /></svg>
+    <span>Request Service</span>
+  </a>
+</aside>
+
+<style>
+  .fixed-service-widget {
+    position: fixed;
+    z-index: 9999;
+    right: max(14px, 1.1vw);
+    bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .widget-top-row { display: flex; align-items: center; gap: 10px; }
+  .back-to-top {
+    display: inline-flex;
+    min-height: 34px;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 0 13px;
+    border-radius: 24px;
+    background: #176457;
+    box-shadow: 0 5px 14px rgba(0,0,0,.22);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .back-arrow { position: relative; display: inline-block; width: 12px; height: 18px; flex: 0 0 12px; }
+  .back-arrow::after { position: absolute; inset: 1px 2px; background: #ffc83d; content: ""; clip-path: polygon(50% 0, 100% 38%, 66% 38%, 66% 100%, 34% 100%, 34% 38%, 0 38%); }
+  .widget-mascot {
+    display: grid;
+    width: 68px;
+    height: 68px;
+    place-items: center;
+    overflow: hidden;
+    border: 3px solid #ffc83d;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 5px 16px rgba(0,0,0,.25);
+  }
+  .widget-mascot img { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .request-service {
+    display: inline-flex;
+    width: min(294px, calc(100vw - 22px));
+    min-height: 70px;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    padding: 0 19px;
+    border: 3px solid #fff;
+    border-radius: 38px;
+    background: #bd302f;
+    box-shadow: 0 12px 26px rgba(116, 31, 29, .34);
+    color: #fff;
+    font-size: 19px;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease;
+  }
+  .request-service svg { width: 20px; height: 20px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: square; stroke-linejoin: miter; }
+  .request-service:hover { transform: translateY(-2px); background: #a92727; box-shadow: 0 15px 30px rgba(116, 31, 29, .4); }
+  .request-service:focus-visible, .back-to-top:focus-visible, .widget-mascot:focus-visible { outline: 3px solid #ffc83d; outline-offset: 4px; }
+  @media (max-width: 620px) {
+    .fixed-service-widget { right: 10px; bottom: 10px; gap: 19px; }
+    .widget-top-row { gap: 10px; }
+    .back-to-top { min-height: 34px; padding-inline: 13px; font-size: 15px; }
+    .widget-mascot { width: 68px; height: 68px; border-width: 3px; }
+    .request-service { width: min(294px, calc(100vw - 22px)); min-height: 70px; gap: 13px; padding-inline: 19px; border-width: 3px; font-size: 19px; }
+    .request-service svg { width: 20px; height: 20px; }
+  }
+</style>

@@ -1,0 +1,155 @@
+<header class="primary-header">
+  <div class="header-inner">
+    <a class="brand" href="/website-1/" aria-label="Delta Plumbing home">
+      <span class="brand-name">Delta</span>
+      <span class="brand-tagline">The Educated Plumber</span>
+    </a>
+
+    <div class="header-actions">
+      <a class="rating" href="#reviews" aria-label="4.8 star Google rating">
+        <span class="google-mark" aria-hidden="true">G</span>
+        <span class="rating-copy"><span class="rating-line"><b>4.8</b><span class="stars">★★★★★</span></span><span class="rating-label">Google Rating</span></span>
+      </a>
+
+      <a class="action-button book-button" href="#contact">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v3M17 2v3M4 9h16M5 4h14a1 1 0 0 1 1 1v15H4V5a1 1 0 0 1 1-1Z"/><path d="M8 13h2m4 0h2m-8 4h2m4 0h2"/></svg>
+        <span>Book Online</span>
+      </a>
+
+      <a class="action-button phone-button" href="tel:+17706797705">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 2.8 10 2l2 5-2.2 1.7a15.2 15.2 0 0 0 5.5 5.5L17 12l5 2-.8 3.4a3 3 0 0 1-3.4 2.3C10 18.5 5.5 14 4.3 6.2a3 3 0 0 1 2.3-3.4Z"/></svg>
+        <span>(770) 679-7705</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .primary-header {
+    width: 100%;
+    height: clamp(109px, 7.1vw, 135px);
+    color: #fff;
+    background: #175b51;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .header-inner {
+    width: 84%;
+    max-width: 1596px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+  }
+
+  .brand {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+    text-decoration: none;
+    line-height: .86;
+  }
+
+  .brand-name {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(39px, 2.53vw, 48px);
+    font-weight: 900;
+    letter-spacing: -.085em;
+    transform: scaleX(1.05);
+    transform-origin: left center;
+  }
+
+  .brand-tagline {
+    margin-top: 8px;
+    font-family: 'Segoe Print', 'Brush Script MT', cursive;
+    font-size: clamp(19px, 1.32vw, 25px);
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: -.045em;
+    transform: rotate(-5deg);
+    transform-origin: left center;
+    white-space: nowrap;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: clamp(14px, 1.2vw, 23px);
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .google-mark {
+    display: grid;
+    flex: 0 0 auto;
+    place-items: center;
+    width: clamp(23px, 1.48vw, 28px);
+    height: clamp(23px, 1.48vw, 28px);
+    border-radius: 50%;
+    color: #4285f4;
+    background: #fff;
+    font-size: clamp(15px, .95vw, 18px);
+    font-weight: 900;
+    box-shadow: inset 0 0 0 2px #e3e9ed;
+  }
+
+  .rating-copy { display: flex; flex-direction: column; gap: 1px; }
+  .rating-line { display: flex; align-items: center; gap: 6px; }
+  .rating-line b { font-size: clamp(18px, 1.16vw, 22px); line-height: 1; }
+  .stars { color: #ffb900; font-size: clamp(16px, 1.08vw, 20px); letter-spacing: .045em; line-height: 1; }
+  .rating-label { font-size: clamp(15px, .98vw, 19px); line-height: 1.12; }
+
+  .action-button {
+    height: clamp(52px, 3.37vw, 64px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    padding: 0 clamp(16px, 1.33vw, 25px);
+    border-radius: 13px;
+    color: #fff;
+    font-size: clamp(16px, 1.16vw, 22px);
+    font-weight: 750;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .action-button svg { flex: 0 0 auto; width: clamp(18px, 1.26vw, 24px); height: clamp(18px, 1.26vw, 24px); fill: currentColor; }
+  .book-button { min-width: clamp(177px, 11.55vw, 219px); border: 2px solid #a2c5bd; background: transparent; }
+  .book-button svg { fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+  .phone-button { min-width: clamp(199px, 13vw, 246px); background: #c12d2b; }
+  .phone-button svg { width: clamp(17px, 1.1vw, 21px); height: clamp(17px, 1.1vw, 21px); }
+  .action-button:hover { filter: brightness(1.08); }
+
+  @media (max-width: 900px) {
+    .header-inner { width: calc(100% - 40px); }
+    .header-actions { gap: 12px; }
+    .rating { gap: 7px; }
+    .book-button, .phone-button { min-width: 0; }
+  }
+
+  @media (max-width: 620px) {
+    .primary-header { height: auto; min-height: 105px; }
+    .header-inner { width: calc(100% - 32px); padding: 14px 0; align-items: flex-start; flex-direction: column; gap: 14px; }
+    .brand-name { font-size: 37px; }
+    .brand-tagline { margin-top: 6px; font-size: 18px; }
+    .header-actions { width: 100%; justify-content: space-between; gap: 8px; }
+    .rating { gap: 6px; }
+    .google-mark { width: 21px; height: 21px; font-size: 14px; }
+    .rating-line b { font-size: 15px; }.stars { font-size: 13px; }.rating-label { font-size: 12px; }
+    .action-button { height: 42px; gap: 6px; padding: 0 10px; border-radius: 8px; font-size: 12px; }
+    .action-button svg { width: 15px; height: 15px; }.phone-button svg { width: 14px; height: 14px; }
+  }
+</style>

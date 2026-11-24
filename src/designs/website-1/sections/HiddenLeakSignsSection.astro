@@ -1,0 +1,171 @@
+<section class="leak-signs" aria-labelledby="leak-signs-title">
+  <div class="signs-layout">
+    <div class="signs-copy">
+      <p class="eyebrow">Check your home</p>
+      <h2 id="leak-signs-title">Signs You Have a Hidden Leak</h2>
+      <p class="signs-intro">You usually don't see the water itself. You see the side effects. Any one of these is worth a phone call. Two or more usually means you have a hidden leak that needs attention before it gets expensive.</p>
+
+      <ul class="signs-list">
+        <li>A water bill jump you can't explain</li>
+        <li>A damp or warm spot on the floor</li>
+        <li>A musty smell that won't go away</li>
+        <li>Mold or mildew where it shouldn't be</li>
+        <li>Running water sounds with every fixture off</li>
+        <li>Low pressure at one or two faucets</li>
+        <li>A yard patch that stays green in a dry week</li>
+        <li>New cracks in floors or the foundation</li>
+      </ul>
+    </div>
+
+    <aside class="urgent-steps" aria-labelledby="urgent-title">
+      <h3 id="urgent-title">What to Do Right Now</h3>
+      <ol>
+        <li><span class="step-number">1</span><p><strong>Shut off the main water valve.</strong> It's usually where the line enters the house, in a crawl space, garage, or basement, or at the meter box by the street.</p></li>
+        <li><span class="step-number">2</span><p><strong>Turn off the water heater</strong> if the leak looks like hot water or is near the tank.</p></li>
+        <li><span class="step-number">3</span><p><strong>Kill power to wet areas</strong> at the breaker if water is near outlets or appliances.</p></li>
+        <li><span class="step-number">4</span><p><strong>Smell gas? Get out first,</strong> then call your gas utility from outside.</p></li>
+        <li><span class="step-number">5</span><p><strong><a href="tel:+17706797705">Call (770) 679-7705.</a></strong> We answer 24/7 with no after-hours surcharge.</p></li>
+      </ol>
+    </aside>
+  </div>
+</section>
+
+<style>
+  .leak-signs {
+    position: relative;
+    padding: 104px max(9vw, 32px) 108px;
+    background: #1b5c50;
+    color: #edf4f1;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .signs-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, .95fr);
+    gap: clamp(52px, 6vw, 112px);
+    align-items: start;
+    width: min(100%, 1556px);
+    margin: 0 auto;
+  }
+  .eyebrow {
+    margin: 3px 0 16px;
+    color: #ffc83d;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  .signs-copy h2 {
+    margin: 0 0 20px;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(38px, 2.8vw, 54px);
+    font-weight: 800;
+    letter-spacing: -.025em;
+    line-height: 1.14;
+  }
+  .signs-intro {
+    max-width: 820px;
+    margin: 0;
+    color: #eef4f1;
+    font-size: clamp(18px, 1.25vw, 23px);
+    line-height: 1.58;
+  }
+  .signs-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 30px;
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .signs-list li {
+    position: relative;
+    min-height: 34px;
+    padding-left: 44px;
+    color: #dce9e4;
+    font-size: clamp(17px, 1.18vw, 22px);
+    line-height: 1.6;
+  }
+  .signs-list li::before {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    display: grid;
+    width: 30px;
+    height: 30px;
+    place-items: center;
+    border-radius: 9px;
+    background: #ffc83d;
+    color: #15594e;
+    content: '✓';
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1;
+  }
+  .urgent-steps { padding-top: 4px; }
+  .urgent-steps h3 {
+    margin: 0 0 22px;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  .urgent-steps ol {
+    display: grid;
+    gap: 19px;
+    margin: 0;
+    padding: 28px 30px 30px;
+    border-top: 5px solid #bd302f;
+    border-radius: 23px;
+    background: #12493f;
+    list-style: none;
+  }
+  .urgent-steps li {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr);
+    align-items: start;
+    gap: 20px;
+  }
+  .step-number {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    border-radius: 13px;
+    background: #bd302f;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .urgent-steps li p {
+    margin: 2px 0 0;
+    color: #dce9e4;
+    font-size: clamp(17px, 1.18vw, 22px);
+    line-height: 1.62;
+  }
+  .urgent-steps strong { color: #fff; font-weight: 800; }
+  .urgent-steps a { color: inherit; text-decoration: none; }
+  .urgent-steps a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  @media (max-width: 1100px) {
+    .leak-signs { padding: 92px 5% 80px; }
+    .signs-layout { gap: 42px; }
+    .signs-list { gap: 12px 18px; }
+    .urgent-steps ol { padding: 24px; }
+    .urgent-steps li { gap: 14px; }
+  }
+  @media (max-width: 760px) {
+    .leak-signs { padding: 64px 20px 60px; }
+    .signs-layout { grid-template-columns: 1fr; gap: 40px; }
+    .eyebrow { margin-top: 0; font-size: 14px; }
+    .signs-copy h2 { max-width: 520px; font-size: clamp(34px, 9vw, 44px); }
+    .signs-intro, .signs-list li, .urgent-steps li p { font-size: 16px; }
+    .signs-list { grid-template-columns: 1fr; gap: 12px; margin-top: 20px; }
+    .signs-list li { padding-left: 40px; }
+    .urgent-steps h3 { font-size: 24px; }
+    .urgent-steps ol { gap: 17px; padding: 22px 18px; border-radius: 18px; }
+    .urgent-steps li { grid-template-columns: 38px minmax(0,1fr); gap: 13px; }
+    .step-number { width: 38px; height: 38px; border-radius: 11px; font-size: 18px; }
+  }
+</style>

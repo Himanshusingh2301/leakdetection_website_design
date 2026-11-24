@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import UtilityBar from './UtilityBar.astro';
+import PrimaryHeader from './PrimaryHeader.astro';
+import MainNavigation from './MainNavigation.astro';
+import HeroSection from './HeroSection.astro';
+import AcousticWaveSection from './AcousticWaveSection.astro';
+import LeakDetectionIntro from './LeakDetectionIntro.astro';
+import LeakHotspotMap from './LeakHotspotMap.astro';
+import LeakResponseCta from './LeakResponseCta.astro';
+import ThermalImagingSection from './ThermalImagingSection.astro';
+import HiddenLeakSignsSection from './HiddenLeakSignsSection.astro';
+import EmergencyCalloutSection from './EmergencyCalloutSection.astro';
+import LeakDetectionProcessSection from './LeakDetectionProcessSection.astro';
+import CustomerReviewsSection from './CustomerReviewsSection.astro';
+import WhyChooseDeltaSection from './WhyChooseDeltaSection.astro';
+import EmergencyBannerSection from './EmergencyBannerSection.astro';
+import LeakDetectionFaqSection from './LeakDetectionFaqSection.astro';
+import HiddenLeakCalloutSection from './HiddenLeakCalloutSection.astro';
+import SiteFooter from './SiteFooter.astro';
+import FixedServiceWidget from './FixedServiceWidget.astro';
+const title = 'Leak Detection Services in Atlanta, GA | Delta Plumbing';
+const description = 'Non-destructive leak detection in Atlanta. Explore Delta Plumbing service options, call for urgent help, or schedule a leak inspection.';
+---
+<BaseLayout title={title} description={description}>
+  <UtilityBar />
+  <PrimaryHeader />
+  <MainNavigation />
+  <main>
+    <HeroSection />
+    <AcousticWaveSection />
+    <LeakDetectionIntro />
+    <LeakHotspotMap />
+    <LeakResponseCta />
+    <ThermalImagingSection />
+    <HiddenLeakSignsSection />
+    <EmergencyCalloutSection />
+    <LeakDetectionProcessSection />
+    <CustomerReviewsSection />
+    <WhyChooseDeltaSection />
+    <EmergencyBannerSection />
+    <LeakDetectionFaqSection />
+    <HiddenLeakCalloutSection />
+  </main>
+  <SiteFooter />
+  <FixedServiceWidget />
+</BaseLayout>

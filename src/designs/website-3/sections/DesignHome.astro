@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const { title = 'Website 3' } = Astro.props;
+---
+<BaseLayout title={`${title} | Design Preview`} description={`Preview ${title}, an independent website concept in the Astro design library.`}>
+  <main class="preview">
+    <a class="back" href="/">← All website designs</a>
+    <p class="eyebrow">DESIGN 03 · STARTER PREVIEW</p>
+    <h1>{title}</h1>
+    <p>This is the starting page for Website 3. Its sections, styles, and assets will live alongside this design so they can be reused across its pages.</p>
+    <div class="note">Ready for your section reference images</div>
+  </main>
+</BaseLayout>
+<style>
+  .preview { max-width: 760px; margin: 0 auto; padding: 8vh 7vw; }
+  .back { color: #547262; font-size: .85rem; }
+  .eyebrow { margin-top: 12vh; color: #748b7c; font-size: .7rem; letter-spacing: .15em; }
+  h1 { margin: 15px 0; font-size: clamp(3rem, 10vw, 6.5rem); letter-spacing: -.07em; }
+  .preview > p:not(.eyebrow) { max-width: 520px; color: #68756d; line-height: 1.8; }
+  .note { margin-top: 48px; padding: 22px; border: 1px dashed #b9c8bc; color: #748b7c; font-size: .85rem; }
+</style>

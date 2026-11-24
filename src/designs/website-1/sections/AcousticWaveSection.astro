@@ -1,0 +1,41 @@
+<section class="acoustic-wave" aria-label="Acoustic leak detection visualization">
+  <div class="wave-inner">
+    <div class="wave-caption">
+      <strong>LISTENING LIVE</strong>
+      <span>Water escaping a pressurized pipe makes a sound.</span>
+    </div>
+    <svg class="wave-graphic" viewBox="0 0 620 76" role="img" aria-label="Acoustic signal peaks where a leak is detected">
+      <path class="wave-guide" d="M4 39 C72 35 112 43 180 39 S266 38 294 39 L304 36 L310 43 L317 15 L323 57 L330 8 L337 67 L344 29 L351 45 L359 36 L367 40 C430 43 482 34 616 39" />
+      <path class="wave-signal" d="M4 39 C72 35 112 43 180 39 S266 38 294 39 L304 36 L310 43 L317 15 L323 57 L330 8 L337 67 L344 29 L351 45 L359 36 L367 40 C430 43 482 34 616 39" />
+      <circle class="signal-point" cx="330" cy="39" r="4" />
+    </svg>
+    <div class="wave-caption wave-caption-end">
+      <strong>PINPOINTED</strong>
+      <span>Often within an inch or two.</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .acoustic-wave { min-height:108px; display:flex; align-items:center; padding:18px max(6.9vw,24px); background:#073a32; color:#dce8e3; font-family:Arial,Helvetica,sans-serif; }
+  .wave-inner { display:grid; width:100%; max-width:1500px; margin:0 auto; grid-template-columns:minmax(250px,1fr) minmax(360px,1.35fr) minmax(220px,.72fr); align-items:center; gap:28px; }
+  .wave-caption { display:flex; flex-direction:column; gap:6px; }
+  .wave-caption strong { color:#ffc83d; font-size:clamp(12px,.77vw,15px); font-weight:900; letter-spacing:.15em; }
+  .wave-caption span { font-size:clamp(14px,.96vw,18px); line-height:1.4; }
+  .wave-caption-end { padding-left:8px; }
+  .wave-graphic { display:block; width:100%; height:76px; overflow:visible; }
+  .wave-graphic path { fill:none; stroke-linecap:round; stroke-linejoin:round; }
+  .wave-guide { stroke:rgba(211,231,220,.42); stroke-width:3; stroke-dasharray:6 9; animation:wave-dash 3.5s linear infinite; }
+  .wave-signal { stroke:#ffc83d; stroke-width:2.5; stroke-dasharray:9 10; animation:wave-dash 2.2s linear infinite; }
+  .signal-point { fill:#c02f2d; stroke:#ffc83d; stroke-width:1.5; transform-origin:330px 39px; animation:signal-beat 1.5s ease-in-out infinite; }
+  @keyframes wave-dash { to { stroke-dashoffset:-76; } }
+  @keyframes signal-beat { 0%,100% { opacity:.65; transform:scale(.8); } 50% { opacity:1; transform:scale(1.5); } }
+  @media(max-width:760px) {
+    .acoustic-wave { padding:20px 22px; }
+    .wave-inner { grid-template-columns:1fr 1fr; gap:10px 18px; }
+    .wave-graphic { grid-column:1 / -1; grid-row:2; height:54px; }
+    .wave-caption-end { align-items:flex-end; text-align:right; }
+    .wave-caption span { font-size:13px; }
+  }
+  @media(prefers-reduced-motion:reduce) { .wave-guide,.wave-signal,.signal-point { animation:none; } }
+</style>

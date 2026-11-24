@@ -1,0 +1,98 @@
+<section class="customer-reviews" aria-labelledby="reviews-title">
+  <div class="reviews-inner">
+    <p class="reviews-eyebrow">Customer reviews</p>
+    <h2 id="reviews-title">What Atlanta Homeowners Say</h2>
+    <p class="reviews-summary">4.7 out of 5 from 200+ Google reviews.</p>
+
+    <div class="reviews-grid">
+      <article class="review-card review-featured">
+        <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Delta has been our go-to for years. Honest, reliable, and the team really knows their stuff. They found a slab leak two other companies couldn't even locate. Wouldn't trust anyone else."</blockquote>
+        <p class="review-author">Jennifer R. · McDonough, GA</p>
+      </article>
+      <article class="review-card">
+        <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Called at 11pm for a burst pipe and they were at my house within the hour. Truly 24/7 service. The technician was knowledgeable, clean, and got everything fixed fast. Highly recommend!"</blockquote>
+        <p class="review-author">David K.</p>
+      </article>
+      <article class="review-card">
+        <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Brandon came out super fast and took care of the problem right away. Very professional, friendly, and personable. Will definitely be calling Delta for any future plumbing needs!"</blockquote>
+        <p class="review-author">Marcus T. · Stockbridge, GA</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .customer-reviews {
+    padding: 108px max(9vw, 32px) 120px;
+    background: #fff4d5;
+    color: #303744;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .reviews-inner { width: min(100%, 1556px); margin: 0 auto; }
+  .reviews-eyebrow {
+    margin: 0 0 16px;
+    color: #bd302f;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  .reviews-inner h2 {
+    margin: 0 0 20px;
+    color: #1b6256;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(40px, 2.85vw, 55px);
+    font-weight: 800;
+    letter-spacing: -.025em;
+    line-height: 1.12;
+  }
+  .reviews-summary { margin: 0; color: #272d38; font-size: clamp(18px, 1.25vw, 23px); line-height: 1.45; }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 388px));
+    justify-content: space-between;
+    gap: 38px;
+    width: calc(100% - 110px);
+    margin: 62px auto 0;
+  }
+  .review-card {
+    min-height: 410px;
+    padding: 42px 36px 34px;
+    border-radius: 25px;
+    background: #fffdfb;
+    box-shadow: 0 18px 44px rgba(78, 63, 34, .07);
+  }
+  .review-featured { padding-top: 36px; border-top: 6px solid #c73937; }
+  .review-stars { color: #e5a400; font-size: 21px; letter-spacing: 1px; line-height: 1.2; }
+  .review-card blockquote {
+    margin: 7px 0 18px;
+    color: #373b44;
+    font-size: clamp(18px, 1.22vw, 22px);
+    font-style: normal;
+    line-height: 1.63;
+  }
+  .review-author { margin: 0; color: #2d7165; font-size: 20px; font-weight: 800; line-height: 1.4; }
+  @media (max-width: 1100px) {
+    .customer-reviews { padding: 78px 5% 84px; }
+    .reviews-grid { width: 100%; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 22px; margin-top: 42px; }
+    .review-card { min-height: 0; padding: 30px 24px; }
+    .review-featured { padding-top: 24px; }
+    .review-card blockquote { font-size: 17px; }
+    .review-author { font-size: 16px; }
+  }
+  @media (max-width: 760px) {
+    .customer-reviews { padding: 58px 20px 64px; }
+    .reviews-eyebrow { margin-bottom: 12px; font-size: 14px; }
+    .reviews-inner h2 { margin-bottom: 14px; font-size: clamp(32px, 8vw, 40px); }
+    .reviews-summary { font-size: 16px; }
+    .reviews-grid { grid-template-columns: 1fr; gap: 16px; width: 100%; margin-top: 28px; }
+    .review-card { padding: 26px 22px; border-radius: 20px; }
+    .review-featured { padding-top: 20px; }
+    .review-card blockquote { margin: 8px 0 14px; font-size: 16px; line-height: 1.55; }
+    .review-author { font-size: 16px; }
+  }
+</style>

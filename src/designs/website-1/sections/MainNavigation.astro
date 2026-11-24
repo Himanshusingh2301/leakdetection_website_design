@@ -1,0 +1,197 @@
+<nav class="main-navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-link" href="#septic-services">Septic Services</a>
+
+    <details class="nav-menu plumbing-menu">
+      <summary>Plumbing Services <span class="chevron" aria-hidden="true"></span></summary>
+      <div class="dropdown plumbing-dropdown">
+        <a href="#leak-detection">Leak Detection Services</a>
+        <a href="#sewer-repair">Sewer Repair</a>
+        <a href="#slab-leak">Slab Leak</a>
+        <a href="#toilets">Toilets</a>
+        <a href="#drain-clog">Drain Clog</a>
+        <details class="submenu water-heaters">
+          <summary>Water Heaters <span class="side-chevron" aria-hidden="true"></span></summary>
+          <div class="dropdown nested-dropdown"><a href="#tankless-water-heater">Tankless Water Heater</a></div>
+        </details>
+        <a href="#house-repipe">House Repipe</a>
+        <a href="#halo-water-filtration">Halo Water Filtration Service</a>
+        <a href="#waterline-repair">Waterline Repair</a>
+      </div>
+    </details>
+
+    <a class="nav-link" href="#commercial-plumbing">Commercial Plumbing</a>
+
+    <details class="nav-menu about-menu">
+      <summary>About Us <span class="chevron" aria-hidden="true"></span></summary>
+      <div class="dropdown about-dropdown">
+        <a href="#tips-guides">Tips &amp; Guides</a>
+        <a href="#careers">Careers</a>
+      </div>
+    </details>
+
+    <a class="nav-link" href="#contact">Contact Us</a>
+    <a class="nav-link" href="#financing">Financing</a>
+  </div>
+</nav>
+
+<script>
+  const hoverMenus = document.querySelectorAll<HTMLDetailsElement>('.main-navigation details');
+
+  for (const menu of hoverMenus) {
+    menu.addEventListener('pointerenter', (event) => {
+      if (event.pointerType === 'mouse' || event.pointerType === 'pen') menu.open = true;
+    });
+
+    menu.addEventListener('pointerleave', (event) => {
+      if ((event.pointerType === 'mouse' || event.pointerType === 'pen') && !menu.contains(document.activeElement)) {
+        menu.open = false;
+      }
+    });
+  }
+</script>
+
+<style>
+  .main-navigation {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: clamp(52px, 3.42vw, 65px);
+    color: #f7f9f7;
+    background: #103c36;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .nav-inner {
+    width: 65.2%;
+    max-width: 1238px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .nav-link, .nav-menu > summary {
+    position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 10px;
+    padding: 0 clamp(6px, .55vw, 11px);
+    color: inherit;
+    font-size: clamp(16px, 1.16vw, 22px);
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .nav-link:hover, .nav-menu:hover > summary, .nav-menu[open] > summary {
+    background: #174a42;
+  }
+
+  .nav-menu {
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  summary { list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+
+  .chevron {
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 2px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    transition: transform .15s ease;
+  }
+
+  .nav-menu:hover > summary .chevron, .nav-menu[open] > summary .chevron {
+    margin-top: 4px;
+    transform: rotate(225deg);
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    min-width: clamp(294px, 19.2vw, 365px);
+    padding: 7px 10px;
+    border-radius: 0 0 13px 13px;
+    color: #242b36;
+    background: #fff;
+    box-shadow: 0 15px 28px #092c2624;
+  }
+
+  .nav-menu:hover > .dropdown, .nav-menu:focus-within > .dropdown, .nav-menu[open] > .dropdown {
+    display: block;
+  }
+
+  .submenu:hover > .nested-dropdown,
+  .submenu:focus-within > .nested-dropdown,
+  .submenu[open] > .nested-dropdown {
+    display: block;
+  }
+
+  .dropdown > a, .submenu > summary {
+    display: flex;
+    width: 100%;
+    min-height: clamp(44px, 2.83vw, 54px);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-radius: 11px;
+    color: inherit;
+    font-size: clamp(16px, 1.08vw, 20px);
+    font-weight: 600;
+    line-height: 1.25;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .dropdown > a:hover, .submenu:hover > summary, .submenu[open] > summary {
+    color: #155c53;
+    background: #eaf2ef;
+  }
+
+  .submenu { position: relative; }
+  .side-chevron {
+    width: 8px;
+    height: 8px;
+    margin-right: 3px;
+    border-right: 2px solid currentColor;
+    border-top: 2px solid currentColor;
+    transform: rotate(45deg);
+  }
+
+  .nested-dropdown {
+    top: -10px;
+    left: calc(100% + 5px);
+    min-width: clamp(278px, 18.1vw, 344px);
+    padding: 9px 10px;
+    border-radius: 13px;
+  }
+
+  .about-dropdown { min-width: clamp(270px, 18.1vw, 344px); }
+
+  @media (max-width: 1050px) {
+    .nav-inner { width: 94%; }
+    .nav-link, .nav-menu > summary { font-size: clamp(14px, 1.55vw, 17px); padding-right: 5px; padding-left: 5px; }
+  }
+
+  @media (max-width: 720px) {
+    .main-navigation { height: 52px; overflow: visible; }
+    .nav-inner { width: 100%; padding: 0 12px; overflow-x: auto; overflow-y: visible; justify-content: flex-start; gap: 9px; scrollbar-width: none; }
+    .nav-inner::-webkit-scrollbar { display: none; }
+    .nav-link, .nav-menu > summary { font-size: 14px; padding: 0 7px; }
+    .dropdown { min-width: min(294px, calc(100vw - 24px)); }
+    .nested-dropdown { left: auto; right: -2px; top: 100%; min-width: min(278px, calc(100vw - 24px)); }
+  }
+</style>
