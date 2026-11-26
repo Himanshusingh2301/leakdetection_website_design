@@ -1,0 +1,75 @@
+<section class="w3-pricing" id="pricing" aria-labelledby="w3-pricing-title">
+  <div class="w3-pricing-inner">
+    <header class="w3-pricing-heading">
+      <p class="w3-pricing-kicker">PRICING <span aria-hidden="true">/</span> HOUSTON, TX</p>
+      <h2 id="w3-pricing-title">Know the likely<br /><em>cost upfront.</em></h2>
+      <p class="w3-pricing-intro">Typical Houston-area estimates for leak detection.</p>
+    </header>
+
+    <div class="w3-pricing-list" data-pricing-reveal aria-label="Typical leak detection price ranges">
+      <div class="w3-pricing-row">
+        <span class="w3-pricing-index" aria-hidden="true">01</span>
+        <h3>Wall &amp; ceiling leaks</h3>
+        <p class="w3-pricing-range"><span>$</span>250–600</p>
+      </div>
+      <div class="w3-pricing-row">
+        <span class="w3-pricing-index" aria-hidden="true">02</span>
+        <h3>Slab leak detection</h3>
+        <p class="w3-pricing-range"><span>$</span>450–1,200</p>
+      </div>
+      <div class="w3-pricing-row">
+        <span class="w3-pricing-index" aria-hidden="true">03</span>
+        <h3>Underground water lines</h3>
+        <p class="w3-pricing-range"><span>$</span>250–800</p>
+      </div>
+      <div class="w3-pricing-row">
+        <span class="w3-pricing-index" aria-hidden="true">04</span>
+        <h3>Commercial properties</h3>
+        <p class="w3-pricing-range"><span>$</span>650<span>+</span></p>
+      </div>
+      <p class="w3-pricing-note">Typical local estimates; final price depends on the property and scope.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const pricingList = document.querySelector('[data-pricing-reveal]');
+  if (pricingList && 'IntersectionObserver' in window) {
+    const pricingObserver = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        pricingList.classList.add('is-visible');
+        pricingObserver.disconnect();
+      }
+    }, { threshold: 0.2 });
+    pricingObserver.observe(pricingList);
+  } else {
+    pricingList?.classList.add('is-visible');
+  }
+</script>
+
+<style>
+  .w3-pricing{position:relative;overflow:hidden;padding:clamp(62px,8vw,104px) clamp(22px,5vw,76px);background:#f7f0e7;color:#30241d}
+  .w3-pricing::before{position:absolute;top:0;right:0;width:35%;height:100%;background:linear-gradient(135deg,#efe2d3,#f7f0e7 80%);clip-path:polygon(35% 0,100% 0,100% 100%,0 100%);content:''}
+  .w3-pricing-inner{position:relative;z-index:1;display:grid;grid-template-columns:minmax(250px,.72fr) minmax(0,1.28fr);gap:clamp(35px,7vw,100px);align-items:start;width:min(1240px,100%);margin:0 auto}
+  .w3-pricing-heading{position:sticky;top:36px;padding-top:14px}
+  .w3-pricing-kicker{display:flex;align-items:center;gap:10px;margin:0 0 17px;color:#ad572f;font-size:10px;font-weight:900;letter-spacing:.16em}
+  .w3-pricing-kicker span{color:#c9a78e}
+  .w3-pricing-heading h2{margin:0;color:#30241d;font:400 clamp(40px,5.2vw,66px)/.97 'DM Serif Display',Georgia,serif;letter-spacing:-.045em}
+  .w3-pricing-heading h2 em{color:#ad572f;font-style:normal}
+  .w3-pricing-intro{max-width:280px;margin:18px 0 0;color:#594b40;font-size:16px;line-height:1.55}
+  .w3-pricing-list{position:relative;border-top:1px solid #d9c7b5}
+  .w3-pricing-row{position:relative;display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:16px;align-items:center;min-height:93px;padding:16px 10px;border-bottom:1px solid #d9c7b5;opacity:.22;transform:translateY(13px);transition:opacity .55s ease,transform .55s cubic-bezier(.2,.75,.2,1),background .2s ease}
+  .w3-pricing-list.is-visible .w3-pricing-row{opacity:1;transform:translateY(0)}
+  .w3-pricing-list.is-visible .w3-pricing-row:nth-child(2){transition-delay:.13s}
+  .w3-pricing-list.is-visible .w3-pricing-row:nth-child(3){transition-delay:.26s}
+  .w3-pricing-list.is-visible .w3-pricing-row:nth-child(4){transition-delay:.39s}
+  .w3-pricing-row:hover{background:#fffaf4}
+  .w3-pricing-index{display:grid;width:30px;height:30px;place-items:center;border:1px solid #c9aa91;border-radius:50%;color:#9e5737;font-size:10px;font-weight:800}
+  .w3-pricing-row h3{margin:0;color:#403126;font-size:clamp(15px,1.45vw,19px);font-weight:700;line-height:1.35}
+  .w3-pricing-range{display:flex;align-items:baseline;gap:1px;margin:0;color:#ad572f;font:400 clamp(25px,3vw,39px)/1 'DM Serif Display',Georgia,serif;letter-spacing:-.04em;white-space:nowrap}
+  .w3-pricing-range span{font:700 .52em/1 'DM Serif Display',Georgia,serif}
+  .w3-pricing-note{margin:18px 0 0;color:#756356;font-size:12px;line-height:1.5}
+  @media(max-width:760px){.w3-pricing::before{width:70%;opacity:.65}.w3-pricing-inner{grid-template-columns:1fr;gap:30px}.w3-pricing-heading{position:static;padding-top:0}.w3-pricing-intro{max-width:none;margin-top:12px}}
+  @media(max-width:520px){.w3-pricing{padding:54px 17px}.w3-pricing-heading h2{font-size:clamp(40px,11vw,54px)}.w3-pricing-row{grid-template-columns:30px minmax(0,1fr) auto;gap:10px;min-height:78px;padding:12px 6px}.w3-pricing-index{width:25px;height:25px;font-size:9px}.w3-pricing-row h3{font-size:13px}.w3-pricing-range{font-size:clamp(21px,6vw,29px)}.w3-pricing-note{font-size:11px}}
+  @media(prefers-reduced-motion:reduce){.w3-pricing-row,.w3-pricing-list.is-visible .w3-pricing-row{opacity:1;transform:none;transition:none}}
+</style>

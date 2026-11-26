@@ -1,0 +1,116 @@
+<section class="w3-hero" id="home" aria-labelledby="w3-hero-title">
+  <svg class="w3-hero-shapes" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="w3-hero-cream-panel" clipPathUnits="objectBoundingBox">
+        <path d="M0 0H.67C.54 .10 .44 .80 .43 1H0Z" />
+      </clipPath>
+    </defs>
+  </svg>
+  <img class="w3-hero-photo" src="/images/website-2/houston-leak-inspection-hero.png" alt="A leak detection technician checking a floor with acoustic listening equipment" fetchpriority="high" />
+  <svg class="w3-hero-curve" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M67 0C54 10 44 80 43 100" />
+  </svg>
+
+  <header class="w3-header">
+    <a class="w3-brand" href="#top" aria-label="Houston Leak Detection home">
+      <span class="w3-brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32"><path d="M16 3C12 9 7 14 7 20a9 9 0 0 0 18 0c0-6-5-11-9-17Z"/><path d="M12 20c0 2 1.4 3.5 3.6 4"/></svg>
+      </span>
+      <span class="w3-brand-name"><strong>HOUSTON</strong><small>LEAK DETECTION</small></span>
+    </a>
+
+    <nav class="w3-nav" aria-label="Main navigation">
+      <a class="is-current" href="#top">Home</a>
+      <a href="#services">Services</a>
+      <a href="#inspection-process">Our Process</a>
+      <a href="#service-areas">Service Areas</a>
+      <a href="#faq">FAQs</a>
+    </nav>
+
+    <a class="w3-header-cta" href="#contact">Request an Inspection <span aria-hidden="true">↗</span></a>
+    <details class="w3-mobile-menu">
+      <summary aria-label="Open navigation"><span></span><span></span></summary>
+      <nav aria-label="Mobile navigation">
+        <a href="#services">Services</a><a href="#inspection-process">Our Process</a><a href="#service-areas">Service Areas</a><a href="#faq">FAQs</a><a href="#contact">Request an Inspection</a>
+      </nav>
+    </details>
+  </header>
+
+  <div class="w3-hero-copy">
+    <h1 id="w3-hero-title">Find the leak.<br />Trace the source.<br /><em>Protect your home.</em></h1>
+    <p class="w3-hero-lead">Damp walls, warm floors, or a rising water bill can point to a hidden leak. Learn where Houston homeowners can start.</p>
+    <div class="w3-hero-actions">
+      <a class="w3-button-primary" href="#contact">Request an Inspection <span aria-hidden="true">↗</span></a>
+      <a class="w3-button-secondary" href="#service-types">Explore Services <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+
+  <div class="w3-seal" aria-label="Houston leak detection">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C12 9 7 14 7 20a9 9 0 0 0 18 0c0-6-5-11-9-17Z"/><path d="M12 20c0 2 1.4 3.5 3.6 4"/></svg>
+    <span>LEAK DETECTION</span><b>HOUSTON · TX</b>
+  </div>
+</section>
+
+<style>
+  .w3-hero{position:relative;isolation:isolate;min-height:min(640px,49vw);overflow:hidden;background:#3b2a20;color:#30241d}
+  .w3-hero::after{position:absolute;z-index:5;inset:0 0 auto;height:2px;background:#bd633a;content:''}
+  .w3-hero-shapes{position:absolute;width:0;height:0;overflow:hidden}
+  .w3-hero-photo{position:absolute;z-index:-2;inset:0 0 0 43%;width:57%;height:100%;object-fit:cover;object-position:100% 50%}
+  .w3-hero::before{position:absolute;z-index:-1;inset:0;width:100%;background:#f7f0e7;clip-path:url(#w3-hero-cream-panel);content:''}
+  .w3-hero-curve{position:absolute;z-index:1;inset:0;width:100%;height:100%;pointer-events:none}
+  .w3-hero-curve path{fill:none;stroke:#b65b34;stroke-width:.8;vector-effect:non-scaling-stroke}
+
+  .w3-header{position:absolute;z-index:4;inset:2px 0 auto;display:grid;grid-template-columns:minmax(180px,1fr) auto minmax(220px,1fr);align-items:center;gap:20px;min-height:clamp(64px,5.7vw,82px);padding:0 clamp(32px,5.4vw,86px) 0 clamp(30px,4vw,64px)}
+  .w3-brand{display:inline-flex;width:max-content;align-items:center;gap:9px;color:#34281f;text-decoration:none}
+  .w3-brand-mark{display:grid;width:37px;height:37px;place-items:center;color:#b75e31}
+  .w3-brand-mark svg{width:31px;height:31px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.6}
+  .w3-brand-name strong,.w3-brand-name small{display:block}
+  .w3-brand-name strong{font:800 clamp(8px,.85vw,12px)/1.15 Manrope,Arial,sans-serif;letter-spacing:.08em}
+  .w3-brand-name small{margin-top:3px;color:#8e6b51;font-size:clamp(6px,.58vw,8px);font-weight:800;letter-spacing:.15em}
+  .w3-nav{display:flex;align-items:center;gap:clamp(15px,2.8vw,34px);transform:translateX(-4vw)}
+  .w3-nav a{position:relative;padding:8px 0;color:#44372f;font-size:clamp(8px,.75vw,11px);font-weight:700;text-decoration:none;white-space:nowrap}
+  .w3-nav a::after{position:absolute;right:0;bottom:0;left:0;height:2px;transform:scaleX(0);transform-origin:left;background:#bd6538;content:'';transition:transform .2s ease}
+  .w3-nav a:hover::after,.w3-nav a.is-current::after{transform:scaleX(1)}
+  .w3-header-cta{justify-self:end;display:inline-flex;min-height:clamp(29px,3vw,43px);align-items:center;gap:10px;padding:0 clamp(12px,1.7vw,18px);border:1px solid #f7d4ac38;border-radius:5px;background:#a9512a;color:#fff8ed;text-decoration:none;font-size:clamp(8px,.7vw,10px);font-weight:800;transition:background .2s ease,transform .2s ease}
+  .w3-header-cta:hover{transform:translateY(-2px);background:#8f4222}
+  .w3-mobile-menu{display:none}
+
+  .w3-hero-copy{position:relative;z-index:2;display:flex;width:58%;min-height:inherit;flex-direction:column;justify-content:center;padding:clamp(92px,14vw,112px) 26px 44px clamp(40px,5.4vw,86px)}
+  .w3-hero h1{max-width:clamp(320px,41vw,570px);margin:0;color:#2e261f;font:700 clamp(34px,4.7vw,68px)/1.02 'DM Serif Display',Georgia,serif;letter-spacing:-.045em}
+  .w3-hero h1 em{color:#ad572f;font-style:normal}
+  .w3-hero-lead{max-width:min(480px,37vw);margin:clamp(12px,1.25vw,18px) 0 0;color:#594b40;font-size:clamp(11px,1.05vw,15px);line-height:1.58}
+  .w3-hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:clamp(15px,1.55vw,22px)}
+  .w3-button-primary,.w3-button-secondary{display:inline-flex;min-height:clamp(32px,3.2vw,45px);align-items:center;justify-content:center;gap:8px;text-decoration:none;font-size:clamp(8px,.75vw,11px);font-weight:800;transition:transform .2s ease,background .2s ease,color .2s ease}
+  .w3-button-primary{padding:0 clamp(12px,2.25vw,18px);border:1px solid #a4512c;border-radius:5px;background:#ad572f;color:#fff!important;box-shadow:0 4px 0 #8c4023}
+  .w3-button-primary:hover{transform:translateY(-2px);background:#934522}
+  .w3-button-secondary{color:#674630!important}
+  .w3-button-secondary:hover{transform:translateX(2px);color:#a24f2b!important}
+  .w3-seal{position:absolute;z-index:3;top:30%;left:calc(52% - clamp(46px,4.15vw,60px));display:flex;width:clamp(92px,8.3vw,120px);height:clamp(92px,8.3vw,120px);flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:10px;border:1px solid #fff0d85c;border-radius:50%;background:#b45c34e8;color:#fff8e9;text-align:center;box-shadow:0 0 0 5px #b45c342a,0 9px 30px #26160f2b}
+  .w3-seal svg{width:clamp(20px,1.75vw,25px);height:clamp(20px,1.75vw,25px);fill:none;stroke:#ffe3b7;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}
+  .w3-seal span{font-size:clamp(6px,.55vw,8px);font-weight:900;letter-spacing:.1em}.w3-seal b{font-size:clamp(5px,.48vw,7px);letter-spacing:.12em}
+
+  @media(max-width:1050px){
+    .w3-header{grid-template-columns:1fr auto auto;gap:14px}.w3-nav{gap:clamp(14px,2.4vw,24px);transform:none}
+    .w3-hero-copy{width:52%;padding-left:5.4vw}
+  }
+  @media(max-width:760px){
+    .w3-hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;background:#f7f0e7}
+    .w3-hero-photo{inset:0 0 auto;width:100%;height:58%;object-position:65% 42%}
+    .w3-hero::before{inset:39% 0 0;width:100%;clip-path:none;border-radius:48% 0 0 0 / 8% 0 0 0;background:#f7f0e7}
+    .w3-hero-curve{display:none}
+    .w3-header{inset:5px 0 auto;grid-template-columns:1fr auto;gap:12px;min-height:72px;padding:0 18px;background:#f7f0e7f2}
+    .w3-brand-mark{width:32px;height:32px}.w3-brand-mark svg{width:27px;height:27px}.w3-nav{display:none}
+    .w3-header-cta{grid-column:2;grid-row:1;min-height:37px;padding-inline:10px;font-size:8px}
+    .w3-mobile-menu{position:relative;display:block;grid-column:2;grid-row:1;justify-self:end;margin-right:145px}
+    .w3-mobile-menu summary{display:grid;width:36px;height:36px;align-content:center;justify-items:center;gap:5px;border:1px solid #d9c5b0;border-radius:50%;background:#fffaf3;cursor:pointer;list-style:none}
+    .w3-mobile-menu summary::-webkit-details-marker{display:none}.w3-mobile-menu summary span{width:15px;height:1.5px;background:#543c2c}
+    .w3-mobile-menu nav{position:absolute;top:44px;right:0;display:grid;min-width:190px;padding:8px;border:1px solid #dfd0c1;border-radius:10px;background:#fffaf3;box-shadow:0 12px 28px #27180f24}
+    .w3-mobile-menu nav a{padding:10px;border-bottom:1px solid #efe5da;color:#3f332a;font-size:12px;font-weight:700;text-decoration:none}.w3-mobile-menu nav a:last-child{border:0;color:#a9512a}
+    .w3-hero-copy{width:100%;min-height:0;justify-content:flex-start;padding:calc(58svh + 8px) 24px 30px}
+    .w3-hero h1{max-width:100%;font-size:clamp(36px,9vw,62px)}.w3-hero-lead{max-width:100%;margin-top:12px;font-size:13px;line-height:1.6}
+    .w3-hero-actions{gap:10px;margin-top:17px}.w3-button-primary,.w3-button-secondary{min-height:42px;font-size:10px}.w3-button-primary{padding-inline:14px}
+    .w3-seal{top:29%;left:auto;right:6%;width:94px;height:94px;gap:3px}.w3-seal svg{width:20px;height:20px}.w3-seal span{font-size:7px}.w3-seal b{font-size:6px}
+  }
+  @media(max-width:430px){.w3-header{padding-inline:14px}.w3-brand{gap:5px}.w3-brand-name strong{font-size:10px}.w3-brand-name small{font-size:6px}.w3-header-cta{min-height:35px;padding-inline:9px;font-size:7px}.w3-mobile-menu{margin-right:125px}.w3-mobile-menu summary{width:34px;height:34px}.w3-hero-copy{padding-inline:19px;padding-bottom:25px}}
+  @media(prefers-reduced-motion:reduce){.w3-hero *,.w3-hero *::before{transition:none!important}}
+</style>

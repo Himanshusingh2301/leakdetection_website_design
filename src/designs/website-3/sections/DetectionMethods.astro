@@ -1,0 +1,106 @@
+<section class="w3-methods" id="methods" aria-labelledby="w3-methods-title">
+  <div class="w3-methods-inner">
+    <header class="w3-methods-heading">
+      <div>
+        <p class="w3-methods-kicker"><span></span> INSIDE THE INSPECTION</p>
+        <h2 id="w3-methods-title">Follow the evidence.<br /><em>Choose the right test.</em></h2>
+      </div>
+      <p>No single device finds every leak. The checks depend on the clues, the plumbing, and what the technician can access.</p>
+    </header>
+
+    <div class="w3-methods-board">
+      <article class="w3-method-feature">
+        <figure class="w3-method-photo w3-method-photo-feature">
+          <img src="https://images.pexels.com/photos/32497162/pexels-photo-32497162.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500" alt="Technician checking a bathroom with an inspection device" loading="lazy" decoding="async" />
+          <figcaption><span>FIELD CHECK 01</span><span>LISTEN FOR THE SOURCE</span></figcaption>
+        </figure>
+        <div class="w3-method-copy w3-method-copy-feature">
+          <p class="w3-method-eyebrow">SOUND · HIDDEN WATER LINES</p>
+          <h3>Acoustic listening</h3>
+          <p>A contact sensor listens for sound vibrations from water escaping a pressurized pipe. It can help narrow the search under floors or behind finished surfaces.</p>
+          <details class="w3-method-more"><summary>What affects the reading <span aria-hidden="true">+</span></summary><p>Noise from appliances, traffic, or other plumbing—and the pipe material—can change what the sensor picks up. The sound is one clue, interpreted alongside the rest of the inspection.</p></details>
+        </div>
+      </article>
+
+      <div class="w3-method-side">
+        <article class="w3-method-secondary">
+          <figure class="w3-method-photo">
+            <img src="https://images.pexels.com/photos/7859781/pexels-photo-7859781.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000" alt="Technician holding a thermal imaging camera" loading="lazy" decoding="async" />
+            <figcaption><span>02 · TEMPERATURE</span></figcaption>
+          </figure>
+          <div class="w3-method-copy">
+            <p class="w3-method-eyebrow">SURFACE PATTERNS</p>
+            <h3>Thermal imaging</h3>
+            <p>An infrared camera shows temperature differences on a surface. Hot or cold water may leave a pattern worth checking further.</p>
+            <details class="w3-method-more"><summary>What it can tell you <span aria-hidden="true">+</span></summary><p>It does not see through walls or confirm a leak on its own. Surface materials, airflow, and room conditions can affect the image.</p></details>
+          </div>
+        </article>
+
+        <article class="w3-method-secondary">
+          <figure class="w3-method-photo">
+            <img src="https://images.pexels.com/photos/7937300/pexels-photo-7937300.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000" alt="Pressure gauge fitted to a network of metal pipes" loading="lazy" decoding="async" />
+            <figcaption><span>03 · LINE TEST</span></figcaption>
+          </figure>
+          <div class="w3-method-copy">
+            <p class="w3-method-eyebrow">CHECK THE SUPPLY</p>
+            <h3>Pressure checks</h3>
+            <p>A gauge checks whether an isolated water line holds pressure. A change can point to water loss in that section.</p>
+            <details class="w3-method-more"><summary>What it can tell you <span aria-hidden="true">+</span></summary><p>A pressure change does not pinpoint the leak by itself. The technician uses the result with the reported symptoms and other checks.</p></details>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <p class="w3-methods-footnote"><span aria-hidden="true">↳</span> The method should fit the problem. Not every inspection needs every tool.</p>
+  </div>
+</section>
+
+<style>
+  .w3-methods{position:relative;overflow:hidden;padding:clamp(70px,8vw,112px) clamp(22px,5vw,76px);background:#f2c94c;color:#172e3c}
+  .w3-methods::before{position:absolute;top:-155px;right:-95px;width:390px;height:390px;border:1px solid #17394a2b;border-radius:50%;box-shadow:0 0 0 24px #17394a0b,0 0 0 48px #17394a08;content:'';pointer-events:none}
+  .w3-methods-inner{position:relative;width:min(1240px,100%);margin:0 auto}
+  .w3-methods-heading{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.65fr);gap:42px;align-items:end;margin-bottom:40px}
+  .w3-methods-kicker{display:flex;align-items:center;gap:9px;margin:0 0 15px;color:#9a432a;font-size:10px;font-weight:900;letter-spacing:.16em}
+  .w3-methods-kicker span{width:8px;height:8px;border-radius:50%;background:#c44b38;box-shadow:0 0 0 5px #c44b3821}
+  .w3-methods h2{margin:0;color:#172e3c;font:400 clamp(38px,5vw,64px)/.99 'DM Serif Display',Georgia,serif;letter-spacing:-.04em}
+  .w3-methods h2 em{color:#a94f31;font-style:normal}
+  .w3-methods-heading>p{max-width:430px;margin:0 0 4px;color:#30454d;font-size:17px;line-height:1.65}
+  .w3-methods-board{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(22px,3.4vw,44px);align-items:stretch}
+  .w3-method-feature{display:flex;min-width:0;flex-direction:column;background:#fffaf0}
+  .w3-method-photo{position:relative;min-width:0;margin:0;overflow:hidden;background:#d9ded9}
+  .w3-method-photo-feature{height:clamp(240px,28vw,385px)}
+  .w3-method-photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+  .w3-method-photo-feature img{object-position:center 47%}
+  .w3-method-secondary:nth-child(1) .w3-method-photo img{object-position:center 42%}
+  .w3-method-secondary:nth-child(2) .w3-method-photo img{object-position:center 50%}
+  .w3-method-feature:hover .w3-method-photo img,.w3-method-secondary:hover .w3-method-photo img{transform:scale(1.035)}
+  .w3-method-photo figcaption{position:absolute;right:0;bottom:0;left:0;display:flex;justify-content:space-between;gap:12px;padding:13px 16px;background:linear-gradient(0deg,#102a38d9,transparent);color:#fff;font-size:9px;font-weight:900;letter-spacing:.13em}
+  .w3-method-copy{padding:20px 22px 22px}
+  .w3-method-copy-feature{padding:24px 28px 27px}
+  .w3-method-eyebrow{margin:0 0 7px;color:#a24b2e;font-size:9px;font-weight:900;letter-spacing:.14em}
+  .w3-method-copy h3{margin:0;color:#173746;font:400 25px/1.12 'DM Serif Display',Georgia,serif;letter-spacing:-.02em}
+  .w3-method-copy-feature h3{font-size:34px}
+  .w3-method-copy>p:not(.w3-method-eyebrow){margin:9px 0 0;color:#485a60;font-size:14px;line-height:1.65}
+  .w3-method-copy-feature>p:not(.w3-method-eyebrow){max-width:58ch;font-size:15px}
+  .w3-method-side{display:grid;grid-template-rows:1fr 1fr;gap:20px}
+  .w3-method-secondary{display:grid;grid-template-columns:minmax(130px,.78fr) minmax(0,1.22fr);min-height:0;background:#fffaf0}
+  .w3-method-secondary .w3-method-photo{min-height:205px}
+  .w3-method-secondary .w3-method-photo img{position:absolute;inset:0}
+  .w3-method-secondary .w3-method-photo figcaption{justify-content:flex-start;padding:11px 12px;font-size:8px}
+  .w3-method-secondary .w3-method-copy{align-self:center;padding:18px 20px}
+  .w3-method-more{margin-top:12px;border-top:1px solid #ded7c9}
+  .w3-method-more summary{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 0 0;color:#125e70;font-size:12px;font-weight:850;cursor:pointer;list-style:none}
+  .w3-method-more summary::-webkit-details-marker{display:none}
+  .w3-method-more summary span{display:grid;width:22px;height:22px;flex:none;place-items:center;border:1px solid #82a9aa;border-radius:50%;font-size:15px;font-weight:500;transition:transform .2s ease,background .2s ease,color .2s ease}
+  .w3-method-more summary:hover span,.w3-method-more summary:focus-visible span{transform:rotate(45deg);background:#125e70;color:#fff}
+  .w3-method-more summary:focus-visible{outline:2px solid #a24b2e;outline-offset:3px}
+  .w3-method-more[open] summary span{transform:rotate(45deg);background:#125e70;color:#fff}
+  .w3-method-more>p{margin:9px 0 0;padding-bottom:2px;color:#485a60;font-size:12px;line-height:1.55;animation:w3-method-reveal .2s ease-out}
+  .w3-methods-footnote{display:flex;align-items:center;gap:11px;margin:30px 0 0;color:#30454d;font-size:14px;font-weight:650}
+  .w3-methods-footnote span{display:grid;width:27px;height:27px;place-items:center;border:1px solid #17394a5c;border-radius:50%;font-size:17px}
+  @keyframes w3-method-reveal{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+  @media(max-width:1050px){.w3-methods-heading{grid-template-columns:1fr minmax(240px,.65fr);gap:25px}.w3-methods-board{grid-template-columns:1fr;gap:22px}.w3-method-photo-feature{height:clamp(260px,42vw,420px)}.w3-method-side{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:18px}.w3-method-secondary{grid-template-columns:1fr}.w3-method-secondary .w3-method-photo{min-height:0;aspect-ratio:1.7}.w3-method-secondary .w3-method-copy{padding:17px 19px 20px}}
+  @media(max-width:650px){.w3-methods{padding:58px 18px}.w3-methods-heading{grid-template-columns:1fr;gap:15px;margin-bottom:27px}.w3-methods h2{font-size:clamp(38px,10vw,52px)}.w3-methods-heading>p{font-size:15px}.w3-method-photo-feature{height:clamp(220px,65vw,350px)}.w3-method-side{grid-template-columns:1fr;gap:15px}.w3-method-secondary{grid-template-columns:minmax(115px,.72fr) minmax(0,1.28fr)}.w3-method-secondary .w3-method-photo{aspect-ratio:auto;min-height:190px}.w3-method-secondary .w3-method-copy{padding:16px}.w3-method-copy h3{font-size:23px}.w3-method-copy-feature h3{font-size:30px}.w3-method-copy>p:not(.w3-method-eyebrow){font-size:13px}.w3-methods-footnote{align-items:flex-start;margin-top:23px;font-size:13px}}
+  @media(max-width:420px){.w3-methods{padding-inline:14px}.w3-method-secondary{grid-template-columns:110px minmax(0,1fr)}.w3-method-secondary .w3-method-photo{min-height:210px}.w3-method-secondary .w3-method-copy{padding:13px}.w3-method-copy h3{font-size:21px}.w3-method-copy>p:not(.w3-method-eyebrow){font-size:12px}.w3-method-more summary{font-size:11px}.w3-method-more>p{font-size:11px}}
+  @media(prefers-reduced-motion:reduce){.w3-method-photo img,.w3-method-more summary span{transition:none}.w3-method-more>p{animation:none}}
+</style>
